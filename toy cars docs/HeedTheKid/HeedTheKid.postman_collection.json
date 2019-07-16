@@ -1,0 +1,73 @@
+{
+	"info": {
+		"name": "HeedTheKid",
+		"_postman_id": "1d43ed8b-e294-9422-b5ff-ab5488c8bfde",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.168.64.2/test/sync_data.php",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "os_version",
+							"value": "9.0.2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "firebase_token",
+							"value": "",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "operating_system",
+							"value": "Android",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "data",
+							"value": "[ \n\t\t\t\t{ \n\t\t\t\t\t\"child_name\": \"علی\",\n\t\t\t\t\t\"child_age\": 6,\n\t\t\t\t\t\"phone\": \"09999999999\",\n\t\t\t\t\t\"email\": \"test@t.t\",\n\t\t\t\t\t\"gender\": true,\n\t\t\t\t\t\"autism_relative\": false,\n\t\t\t\t\t\"records\": [\n\t\t\t\t\t\t\t\t\t{\t\n\t\t\t\t\t\t\t\t\t\t\"id\": 1,\n\t\t\t\t\t\t\t\t\t\t\"ac_x\": 3,\n\t\t\t\t\t\t\t\t\t    \"ac_y\": 4,\n\t\t\t\t\t\t\t\t\t    \"ac_z\": 5,\n\t\t\t\t\t\t\t\t\t    \"battery\": 20,\n\t\t\t\t\t\t\t\t\t    \"encoder1\": 21,\n\t\t\t\t\t\t\t\t\t    \"encoder2\": 232,\n\t\t\t\t\t\t\t\t\t    \"car_time\": 2131242131,\n\t\t\t\t\t\t\t\t\t    \"session_id\": 11,\n\t\t\t\t\t\t\t\t\t    \"universal_time\": 2131242131213\n\t\t\t\t\t\t\t\t\t},\n\t\t\t\t\t\t\t\t\t{\t\n\t\t\t\t\t\t\t\t\t\t\"id\": 2,\n\t\t\t\t\t\t\t\t\t\t\"ac_x\": 4,\n\t\t\t\t\t\t\t\t\t    \"ac_y\": 5,\n\t\t\t\t\t\t\t\t\t    \"ac_z\": 6,\n\t\t\t\t\t\t\t\t\t    \"battery\": 20,\n\t\t\t\t\t\t\t\t\t    \"encoder1\": 21,\n\t\t\t\t\t\t\t\t\t    \"encoder2\": 232,\n\t\t\t\t\t\t\t\t\t    \"car_time\": 2131242131,\n\t\t\t\t\t\t\t\t\t    \"session_id\": 11,\n\t\t\t\t\t\t\t\t\t    \"universal_time\": 2131242131213\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t\t\"child_name\": \"Koko\",\n\t\t\t\t\t\"child_age\": 6,\n\t\t\t\t\t\"phone\": \"09999999999\",\n\t\t\t\t\t\"email\": \"test@t.t\",\n\t\t\t\t\t\"gender\": false, \n\t\t\t\t\t\"autism_relative\": true,\n\t\t\t\t\t\"records\": [\n\t\t\t\t\t\t\t\t\t{\t\n\t\t\t\t\t\t\t\t\t\t\"id\": 3,\n\t\t\t\t\t\t\t\t\t\t\"ac_x\": 12,\n\t\t\t\t\t\t\t\t\t    \"ac_y\": 43,\n\t\t\t\t\t\t\t\t\t    \"ac_z\": 7,\n\t\t\t\t\t\t\t\t\t    \"battery\": 220,\n\t\t\t\t\t\t\t\t\t    \"encoder1\": 221,\n\t\t\t\t\t\t\t\t\t    \"encoder2\": 2232,\n\t\t\t\t\t\t\t\t\t    \"car_time\": 21312432223131,\n\t\t\t\t\t\t\t\t\t    \"session_id\": 2142131,\n\t\t\t\t\t\t\t\t\t    \"universal_time\": 213231242131213\n\t\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "uuid",
+							"value": "some_phone_uuid_0",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.64.2/test/sync_data.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"64",
+						"2"
+					],
+					"path": [
+						"test",
+						"sync_data.php"
+					]
+				},
+				"description": "syncData for HeedTheKid"
+			},
+			"response": []
+		}
+	]
+}

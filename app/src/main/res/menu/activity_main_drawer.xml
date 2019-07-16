@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perform_test"
+            android:icon="@drawable/ic_sciences_classes_test_tube"
+            android:title="@string/perform_test_title" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_action_history"
+            android:title="@string/history_title" />
+        <item
+            android:id="@+id/nav_how_it_works"
+            android:icon="@drawable/ic_action_help"
+            android:title="@string/how_it_works_title" />
+        <item
+            android:id="@+id/nav_preferences"
+            android:icon="@drawable/ic_action_settings"
+            android:title="@string/preferences_title" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_action_info"
+            android:title="@string/about_us_title" />
+        <item
+            android:id="@+id/nav_debug"
+            android:icon="@android:drawable/ic_dialog_alert"
+            android:title="@string/debug_title" />
+
+    </group>
+
+    <item android:title="Actions">
+        <menu>
+            <item
+                android:id="@+id/nav_sync"
+                android:icon="@drawable/ic_file_cloud_upload"
+                android:title="Sync data" />
+            <item
+                android:id="@+id/nav_export"
+                android:icon="@drawable/ic_file_upload"
+                android:title="Export as csv" />
+        </menu>
+    </item>
+
+</menu>

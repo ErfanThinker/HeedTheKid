@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name" translatable="false">Heed the kid!</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="write_settings_dialog_message" translatable="false">This application needs WRITE_SETTINGS permission in order to modify hotspot of your device to establish a connection to the car, please grant the permission by going to the settings.</string>
+    <string name="action_preferences" translatable="false">Preferences</string>
+    <string name="action_debug" translatable="false">Debug</string>
+    <string name="perform_test_title" translatable="false">Perform Test</string>
+    <string name="history_title" translatable="false">History</string>
+    <string name="how_it_works_title" translatable="false">How it works</string>
+    <string name="preferences_title" translatable="false">Preferences</string>
+    <string name="about_us_title" translatable="false">About us</string>
+    <string name="debug_title" translatable="false">Debug</string>
+    <string name="hotspot_SSID" translatable="false">mCar</string>
+    <string name="hotspot_PASS" translatable="false">il0v3g00gl3</string>
+    <string name="test_performer_fragment_tag" translatable="false">Test Performer Fragment</string>
+    <string name="preferences_fragment_tag" translatable="false">preferences Fragment</string>
+    <string name="debug_fragment_tag" translatable="false">debug Fragment</string>
+    <string name="storage_perm" translatable="false">Storage permission</string>
+    <string name="storage_perm_desc" translatable="false">Heed the kid! asks permissions to access and modify your SD-card contents.</string>
+    <string name="done" translatable="false">Done</string>
+    <string name="acceleration_chart_description" translatable="false">Acceleration Sensor Data</string>
+    <string name="acceleration_chart_no_data" translatable="false">To commence the test\nplease press start button below!</string>
+    <string name="encoder_1" translatable="false">Encoder 1-></string>
+    <string name="encoder_1_0" translatable="false"><![CDATA[Encoder 1-> 0]]></string>
+    <string name="encoder_2_0" translatable="false"><![CDATA[Encoder 2-> 0]]></string>
+    <string name="encoder_2" translatable="false">Encoder 2-></string>
+    <string name="history_fragment_tag" translatable="false">history_fragment_tag</string>
+    <string name="action_history" translatable="false">History</string>
+    <string name="no_history" translatable="false">It appers there\'s no history available yet!</string>
+    <string name="detailed_history_fragment_tag" translatable="false">detailed_history_frag_tag</string>
+    <string name="action_detailed_history" translatable="false">Detailed History</string>
+    <string name="exporting_db" translatable="false">Please wait a sec, it won\'t take long...</string>
+    <string name="invalid_phone">Phone Number is not valid</string>
+</resources>

@@ -1,0 +1,65 @@
+{
+	"uuid": "sad23-uefnfa-232-sda21",
+	"firebase_token": "test",
+	"operating_system": "Android",
+	"os_version": "8.2.1",
+	"data":	[ 
+				{ 
+					"child_name": "علی",
+					"child_age": 6,
+					"phone": "09999999999",
+					"email": "test@t.t",
+					"gender": true,
+					"autism_relative": false,
+					"records": [
+									{	
+										"id": 1,
+										"ac_x": 3,
+									    "ac_y": 4,
+									    "ac_z": 5,
+									    "battery": 20,
+									    "encoder1": 21,
+									    "encoder2": 232,
+									    "car_time": 2131242131,
+									    "session_id": 11,
+									    "universal_time": 2131242131213
+									},
+									{	
+										"id": 2,
+										"ac_x": 4,
+									    "ac_y": 5,
+									    "ac_z": 6,
+									    "battery": 20,
+									    "encoder1": 21,
+									    "encoder2": 232,
+									    "car_time": 2131242131,
+									    "session_id": 11,
+									    "universal_time": 2131242131213
+									}
+							]
+				},
+				{
+					"child_name": "Koko",
+					"child_age": 6,
+					"phone": "09999999999",
+					"email": "test@t.t",
+					"gender": false, 
+					"autism_relative": true,
+					"records": [
+									{	
+										"id": 3,
+										"ac_x": 12,
+									    "ac_y": 43,
+									    "ac_z": 7,
+									    "battery": 220,
+									    "encoder1": 221,
+									    "encoder2": 2232,
+									    "car_time": 21312432223131,
+									    "session_id": 2142131,
+									    "universal_time": 213231242131213
+									}
+							]
+				}
+			]
+	
+}

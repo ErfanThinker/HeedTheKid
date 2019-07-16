@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "997545521383",
+    "firebase_url": "https://cardasmarto2.firebaseio.com",
+    "project_id": "cardasmarto2",
+    "storage_bucket": "cardasmarto2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997545521383:android:db73f8428602189f",
+        "android_client_info": {
+          "package_name": "net.crowmaster.cardasmarto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997545521383-k7tdfceubel2k4m7frb1lmo2vdfbgqfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.crowmaster.cardasmarto",
+            "certificate_hash": "35a4c267004b1d94a16097762b602c12c71b8e5e"
+          }
+        },
+        {
+          "client_id": "997545521383-2neq25th29r84kh9utplafkleb35palk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9Ysomicd6xkP8_T9u_QqVmacJPNb7Atg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997545521383-2neq25th29r84kh9utplafkleb35palk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

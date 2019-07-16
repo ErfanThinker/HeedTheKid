@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#009688</color>
+    <color name="colorPrimaryDark">#00897b</color>
+    <color name="colorAccent">#ffc400</color>
+    <color name="textColorDark">#212121</color>
+    <color name="textColorLight">#fafafa</color>
+    <color name="test0">#b2a242</color>
+    <color name="test1">#90a4ae</color>
+    <color name="test2">#b27a42</color>
+    <color name="test">#cc0029</color>
+    <color name="divider_color">#00acc1</color>
+    <color name="red_500">#f44336</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="cyan_600">#00acc1</color>
+    <color name="teal_500">#009688</color>
+    <color name="cyan_700">#0097a7</color>
+    <color name="cyan_800">#00838f</color>
+
+</resources>

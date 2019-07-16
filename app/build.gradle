@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "net.crowmaster.cardasmarto"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 12
+        versionName "1.1.7"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation deps.kotlin.stdlib
+
+    implementation deps.work.runtime_ktx
+    implementation deps.navigation.runtime_ktx
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.ui_ktx
+
+    implementation deps.kotlin.stdlib
+    implementation deps.support.app_compat
+    implementation deps.support.cardview
+    implementation deps.support.recyclerview
+    implementation deps.support.design
+    implementation deps.navigation.fragment
+    implementation deps.navigation.ui
+    implementation deps.support.v4
+    implementation deps.constraint_layout
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.gson
+    implementation deps.retrofit.scalars
+    implementation deps.okhttp_logging_interceptor
+
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.balysv.materialmenu:material-menu-toolbar:1.5.4'
+    implementation 'com.github.paolorotolo:appintro:4.1.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
+    implementation 'com.mikhaellopez:circularimageview:3.0.2'
+//    compile 'com.android.support:multidex:1.0.1'
+    implementation 'com.sdsmdg.tastytoast:tastytoast:0.0.1'
+    implementation files('libs/opencsv-3.8.jar')
+//    implementation 'com.google.code.ksoap2-android:ksoap2-j2se:3.6.2'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+}

@@ -1,0 +1,53 @@
+{
+	"uuid": "some_uuid",
+	"firebase_token": String,
+	"operating_system": String,
+	"os_version": String,
+	"data":	[ 
+				{ 
+					"child_name": String,
+					"child_age": long,
+					"phone": String,
+					"email": String,
+					"gender": boolean, //(true for m, false for f)
+					"autism_relative": boolean, //(true for positive, false for negative),
+					"records": [
+									{	
+										"id": long,
+										"ac_x": long,
+									    "ac_y": long,
+									    "ac_z": long,
+									    "battery": long,
+									    "encoder1": long,
+									    "encoder2": long,
+									    "car_time": long,
+									    "session_id": long,
+									    "universal_time": long
+									},...
+							]
+				}
+				,{
+					"child_name": String,
+					"child_age": long,
+					"phone": String,
+					"email": String,
+					"gender": boolean, //(true for m, false for f)
+					"autism_relative": boolean, //(true for positive, false for negative),
+					"records": [
+									{	
+										"id": long,
+										"ac_x": long,
+									    "ac_y": long,
+									    "ac_z": long,
+									    "battery": long,
+									    "encoder1": long,
+									    "encoder2": long,
+									    "car_time": long,
+									    "session_id": long,
+									    "universal_time": long
+									},...
+							]
+				},...
+			]
+	
+}

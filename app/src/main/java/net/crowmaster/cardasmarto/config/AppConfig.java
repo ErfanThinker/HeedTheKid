@@ -26,6 +26,10 @@ public class AppConfig extends Application {
         Stetho.initializeWithDefaults(this);
         instance = this;
         uuid = Installation.id(this);
+
+        /*
+          The code below is will enable work manager which will be responsible for automatically syncing the data with the server
+        */
 //        Configuration configuration = new Configuration.Builder()
 //                .setMinimumLoggingLevel(Log.VERBOSE)
 //                .build();

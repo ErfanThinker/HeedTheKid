@@ -19,6 +19,10 @@ import java.util.Calendar;
 /**
  * Created by root on 7/16/16.
  */
+
+/**
+ * Responsible for generating rows for history fragment {@link net.crowmaster.cardasmarto.fragments.HistoryFragment}
+ */
 public class HistoryRowAdapter extends RecyclerView.Adapter<HistoryRowAdapter.ViewHolder> {
 
     private ArrayList<HistorySimpleEntity> items;
@@ -78,9 +82,9 @@ public class HistoryRowAdapter extends RecyclerView.Adapter<HistoryRowAdapter.Vi
         public CardView rootView;
         public ViewHolder(View view) {
             super(view);
-            title = (TextView) view.findViewById(R.id.msg_tv);
-            icon = (CircularImageView) view.findViewById(R.id.row_icon);
-            rootView = (CardView) view.findViewById(R.id.row_root);
+            title = view.findViewById(R.id.msg_tv);
+            icon = view.findViewById(R.id.row_icon);
+            rootView = view.findViewById(R.id.row_root);
         }
     }
 }

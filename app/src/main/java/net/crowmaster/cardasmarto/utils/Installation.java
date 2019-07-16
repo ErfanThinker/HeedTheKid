@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.UUID;
 
+/**
+ * This class is responsible for generating a UUID for each installation of the application
+ */
 public class Installation {
     private static String sID = null;
     private static final String INSTALLATION = "INSTALLATION";

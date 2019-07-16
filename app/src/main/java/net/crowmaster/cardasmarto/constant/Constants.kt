@@ -1,5 +1,8 @@
 package net.crowmaster.cardasmarto.constant
 
+/**
+ * Constants used as keys for reading data from the incoming packets from the car and saving the states of the app in SharedPreferences
+ */
 class Constants {
     companion object {
         const val KEY_FB_TOKEN = "firebase_token"

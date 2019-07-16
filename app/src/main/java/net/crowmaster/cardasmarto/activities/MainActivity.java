@@ -61,10 +61,13 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     private static final int MY_PERMISSIONS_REQUEST_STORAGE = 2937;
     private static final int MY_PERMISSIONS_REQUEST_LOCATION = 2938;
-    private MaterialMenuIconToolbar materialMenu;
+
     private boolean isAtHome;
+
+    private MaterialMenuIconToolbar materialMenu;
     private DrawerLayout drawer;
     private CoordinatorLayout drawerInner;
     private static Menu mMenu;
@@ -73,6 +76,10 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initUI();
+    }
+
+    private void initUI() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -86,7 +93,7 @@ public class MainActivity extends AppCompatActivity
                 return R.id.toolbar;
             }
         };
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_perform_test);
 
@@ -111,13 +118,12 @@ public class MainActivity extends AppCompatActivity
 
         drawerInner = findViewById(R.id.drawer_content_holder);
 
-
     }
 
 
-
-
-
+    /**
+     * Responsible for navigation to {@link net.crowmaster.cardasmarto.fragments.TestPerformerFragment}
+     */
     private void goToTestPerformer() {
         if(getSupportFragmentManager().findFragmentByTag(getString(R.string.test_performer_fragment_tag)) == null) {
             getSupportFragmentManager().beginTransaction()
@@ -137,6 +143,9 @@ public class MainActivity extends AppCompatActivity
         clearMenuVisibility();
     }
 
+    /**
+     * Responsible for navigation to {@link net.crowmaster.cardasmarto.fragments.PreferencesFragment}
+     */
     private void goToPreferences() {
         if(getSupportFragmentManager().findFragmentByTag(getString(R.string.preferences_fragment_tag)) == null) {
             getSupportFragmentManager().beginTransaction()
@@ -159,6 +168,9 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    /**
+     * Responsible for navigation to {@link net.crowmaster.cardasmarto.fragments.DebugFragment}
+     */
     private void goToDebug() {
         if(getSupportFragmentManager().findFragmentByTag(getString(R.string.debug_fragment_tag)) == null) {
             getSupportFragmentManager().beginTransaction()
@@ -181,6 +193,10 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+    /**
+     * Responsible for navigation to {@link net.crowmaster.cardasmarto.fragments.HistoryFragment}
+     */
     private void goToHistory() {
         if(getSupportFragmentManager().findFragmentByTag(getString(R.string.history_fragment_tag)) == null) {
             getSupportFragmentManager().beginTransaction()
@@ -303,7 +319,7 @@ public class MainActivity extends AppCompatActivity
             new AsyncExportDbAsCsv().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, this);
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -312,7 +328,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_perform_test);
 

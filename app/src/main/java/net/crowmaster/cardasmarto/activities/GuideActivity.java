@@ -15,6 +15,8 @@ import net.crowmaster.cardasmarto.R;
 
 /**
  * Created by root on 6/16/16.
+ * This activity is launched after user touches "How it works" option in drawer menu and
+ * this activity was designated to show some general information about the process to the user.
  */
 public class GuideActivity extends AppIntro2 {
 

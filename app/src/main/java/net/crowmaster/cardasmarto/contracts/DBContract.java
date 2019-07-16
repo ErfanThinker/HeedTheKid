@@ -2,6 +2,8 @@ package net.crowmaster.cardasmarto.contracts;
 
 /**
  * Created by root on 7/14/16.
+ *
+ * These constants are used as column names of the app database
  */
 public class DBContract {
 

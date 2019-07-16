@@ -16,6 +16,10 @@ import net.crowmaster.cardasmarto.entities.HistoryDetailedEntity;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+
+/**
+ * Responsible for generating rows for debug fragment {@link net.crowmaster.cardasmarto.fragments.DebugFragment}
+ */
 public class HistoryDebugAdapter extends RecyclerView.Adapter<HistoryDebugAdapter.ViewHolder> {
 
     private ArrayList<HistoryDetailedEntity> items;
@@ -80,12 +84,12 @@ public class HistoryDebugAdapter extends RecyclerView.Adapter<HistoryDebugAdapte
         public CardView rootView;
         public ViewHolder(View view) {
             super(view);
-            timeTV = (TextView) view.findViewById(R.id.time_tv);
-            batteryTV = (TextView) view.findViewById(R.id.battery_tv);
-            accTV = (TextView) view.findViewById(R.id.acc_tv);
-            encoderTV = (TextView) view.findViewById(R.id.encoder_tv);
-            icon = (CircularImageView) view.findViewById(R.id.row_icon);
-            rootView = (CardView) view.findViewById(R.id.row_root);
+            timeTV = view.findViewById(R.id.time_tv);
+            batteryTV = view.findViewById(R.id.battery_tv);
+            accTV = view.findViewById(R.id.acc_tv);
+            encoderTV = view.findViewById(R.id.encoder_tv);
+            icon = view.findViewById(R.id.row_icon);
+            rootView = view.findViewById(R.id.row_root);
         }
     }
 }

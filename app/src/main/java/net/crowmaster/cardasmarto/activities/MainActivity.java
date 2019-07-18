@@ -300,20 +300,21 @@ public class MainActivity extends AppCompatActivity
             materialMenu.animateState(MaterialMenuDrawable.IconState.ARROW);
             isAtHome = false;
             drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-        } else if (id == R.id.nav_sync) {
-            //First check internet access
-            if (InternetUtils.internetConnectionAvailable(500)) {
-                Toast.makeText(this, "Connected!", Toast.LENGTH_SHORT).show();
-            } else {
-                final Snackbar snackbar = Snackbar.make(drawerInner, "Please connect to internet to proceed."
-                        , Snackbar.LENGTH_INDEFINITE);
-                snackbar.setAction("Got it!", new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        snackbar.dismiss();
-                    }
-                }).show();
-            }
+        } else if (id == R.id.nav_sync) { // since the sync is now done automatically,
+            // this option should do nothing
+
+//            if (InternetUtils.internetConnectionAvailable(500)) {//First check internet access
+//                Toast.makeText(this, "Connected!", Toast.LENGTH_SHORT).show();
+//            } else {
+//                final Snackbar snackbar = Snackbar.make(drawerInner, "Please connect to internet to proceed."
+//                        , Snackbar.LENGTH_INDEFINITE);
+//                snackbar.setAction("Got it!", new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        snackbar.dismiss();
+//                    }
+//                }).show();
+//            }
 
         } else if (id == R.id.nav_export) {
             new AsyncExportDbAsCsv().executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR, this);

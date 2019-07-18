@@ -23,7 +23,12 @@ import java.util.ArrayList;
 
 /**
  * Created by root on 7/14/16.
+ * This class is used for updating the chart in the {@link net.crowmaster.cardasmarto.fragments.TestPerformerFragment}
+ * and storing the incoming data from the car to the database at
+ * {@link net.crowmaster.cardasmarto.services.DataCollectorService#OnResponse}
  */
+
+
 public class SensorDataProvider extends ContentProvider {
     private DBHelper db;
     public static final String AUTHORITY = "net.crowmaster.cardasmarto.SensorDataProvider";

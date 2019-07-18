@@ -23,6 +23,7 @@ interface ServerService {
                  ): Call<JSONObject>
 
     companion object {
+        // cloud server (or local server) base address
         val ENDPOINT = "http://192.168.1.33/test/"
     }
 }

@@ -22,6 +22,7 @@ public class DBContract {
         public static final String COLUMN_AC_Z = "ac_z";
         public static final String COLUMN_ENCODER_1 = "encoder_1";
         public static final String COLUMN_ENCODER_2 = "encoder_2";
+        //This session serial contains the time in millis at the beginning of each record session
         public static final String COLUMN_SESSION_SERIAL = "session_serial";
         public static final String COLUMN_CHILD_AGE = "child_age";
         public static final String COLUMN_CHILD_NAME = "child_name";

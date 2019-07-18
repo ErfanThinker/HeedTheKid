@@ -11,7 +11,14 @@ import net.crowmaster.cardasmarto.fragments.TestPerformerFragment;
 import net.crowmaster.cardasmarto.providers.SensorDataProvider;
 import net.crowmaster.cardasmarto.services.DataCollectorService;
 
+/**
+ * This receiver checks the name of newly connected wifi and if it equals to
+ * {@link #desiredSSID predefined SSID}.
+ */
 public class WifiBroadcastReceiver extends BroadcastReceiver {
+
+    String desiredSSID = "Mcar";
+    //        String desiredMacAddress = "router mac address";
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -33,9 +40,6 @@ public class WifiBroadcastReceiver extends BroadcastReceiver {
     /** Detect you are connected to a specific network. */
     private boolean checkConnectedToDesiredWifi(Context context) {
         boolean connected = false;
-
-//        String desiredMacAddress = "router mac address";
-        String desiredSSID = "Mcar";
 
         WifiManager wifiManager =
                 (WifiManager) context.getApplicationContext().getSystemService(Context.WIFI_SERVICE);

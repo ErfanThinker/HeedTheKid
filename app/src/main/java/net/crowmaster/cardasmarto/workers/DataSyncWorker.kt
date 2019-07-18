@@ -34,6 +34,10 @@ import java.nio.charset.Charset
 import java.util.*
 
 
+/**
+ * The worker which will be invoked by WorkManager in order to send the data to the cloud/local server
+ * Please remember to modify [isConnected] method of this class in case the server is not on the internet
+ */
 class DataSyncWorker(appContext: Context, workerParams: WorkerParameters)
     : Worker(appContext, workerParams) {
 
@@ -53,7 +57,6 @@ class DataSyncWorker(appContext: Context, workerParams: WorkerParameters)
             val dbHelper = DBHelper(applicationContext)
 
             while (true) {
-
 
 
                 val recordsNotSynced = dbHelper.unsyncedRecords
@@ -175,6 +178,9 @@ class DataSyncWorker(appContext: Context, workerParams: WorkerParameters)
 
     }
 
+    /**
+     * Change command value in [isConnected] in case the server is not on the internet
+     */
     @Throws(InterruptedException::class, IOException::class)
     fun isConnected(): Boolean {
         val command = "ping -c 1 google.com"

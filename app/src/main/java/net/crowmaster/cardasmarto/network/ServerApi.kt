@@ -19,9 +19,8 @@ import net.crowmaster.cardasmarto.network.entities.ChildData
 import org.json.JSONArray
 import retrofit2.http.Field
 
-
 /**
- * The Imgur API client, which uses the [ImgurService] Retrofit APIs.
+ * This class is responsible for actual upload of the data to the cloud/local server
  */
 class ServerApi private constructor() {
     private val mServerService: ServerService
@@ -36,15 +35,19 @@ class ServerApi private constructor() {
         val client = OkHttpClient.Builder()
                 .addInterceptor(LoggingInterceptor())
                 .build()
+
         val retrofit = Retrofit.Builder()
                 .baseUrl(ServerService.ENDPOINT)
                 .client(client)
                 .addConverterFactory(GsonConverterFactory.create(gson))
-//                .addConverterFactory(ScalarsConverterFactory.create())
                 .build()
+
         mServerService = retrofit.create(ServerService::class.java)
     }
 
+    /*
+    This method will upload the data to the server
+     */
     fun syncDataToServer(fbToken: String,
                          uuid:String,
                          os:String,

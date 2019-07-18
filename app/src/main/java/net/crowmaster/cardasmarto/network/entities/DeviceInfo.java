@@ -5,6 +5,11 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * This class will be converted to the root of json data used for posting the data to the cloud
+ * The {@link net.crowmaster.cardasmarto.network.entities.ChildData} will be direct child node of this class in the json data
+ * and each ChildData will contain a list of {@link net.crowmaster.cardasmarto.network.entities.TestRecord}s
+ */
 public class DeviceInfo {
 
     public DeviceInfo(String firebaseToken, String uuid, String os, String osVersion, List<ChildData> data) {

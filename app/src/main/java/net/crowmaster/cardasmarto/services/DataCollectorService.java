@@ -32,10 +32,11 @@ import java.util.Calendar;
 
 /**
  * Created by root on 6/16/16.
+ * This service is responsible for collecting the data from the car
  */
 public class DataCollectorService extends Service implements MyServer.ResponseInterface{
     public static final String TAG = "MyServiceTag";
-    private static MyServer myServer;
+    private static MyServer myServer; // NanoHttpdServer
     private long SESSION_SERIAL = 1;
     private static String childName = "";
     private static String phone = "";
@@ -44,6 +45,7 @@ public class DataCollectorService extends Service implements MyServer.ResponseIn
     private static boolean autismRelative = false;
     private static int childAge = -1;
 
+    // These three fields are used to check whether this service is running or nt from the application/activity
     public static final String ACTION_PING = DataCollectorService.class.getName() + ".PING";
     public static final String ACTION_PONG = DataCollectorService.class.getName() + ".PONG";
 
@@ -68,7 +70,7 @@ public class DataCollectorService extends Service implements MyServer.ResponseIn
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.e("DataCollectorService", "onStartCommand");
+//        Log.e("DataCollectorService", "onStartCommand");
         LocalBroadcastManager.getInstance(this).registerReceiver(mReceiver, new IntentFilter(ACTION_PING));
         SESSION_SERIAL = getApplicationContext()
                 .getSharedPreferences("server_status", MODE_PRIVATE).getLong("COLUMN_SESSION_SERIAL",

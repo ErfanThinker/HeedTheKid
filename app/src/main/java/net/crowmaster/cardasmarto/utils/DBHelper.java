@@ -71,6 +71,12 @@ public class DBHelper extends SQLiteOpenHelper {
         }
     }
 
+
+    /**
+     * @return ArrayList of {@link net.crowmaster.cardasmarto.entities.HistorySimpleEntity}
+     *     which are essentially compressed form of the records in the database which are grouped based on
+     *      their session serial
+     */
     public ArrayList<HistorySimpleEntity> getSimpleHistoryList() {
         ArrayList<HistorySimpleEntity> result = new ArrayList<HistorySimpleEntity>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -107,6 +113,10 @@ public class DBHelper extends SQLiteOpenHelper {
         return result;
     }
 
+    /**
+     * @return ArrayList of {@link net.crowmaster.cardasmarto.entities.HistoryDetailedEntity}
+     *     which are essentially the last 100 records in the database used for debug purpose
+     */
     public ArrayList<HistoryDetailedEntity> getRecentRecords() {
         ArrayList<HistoryDetailedEntity> result = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();
@@ -149,6 +159,10 @@ public class DBHelper extends SQLiteOpenHelper {
         return result;
     }
 
+    /**
+     * @return ArrayList of {@link net.crowmaster.cardasmarto.entities.HistorySimpleEntity}
+     * This method is used for fetching the new records which are going to be uploaded to the cloud
+     */
     public ArrayList<HistoryDetailedEntity> getUnsyncedRecords() {
         ArrayList<HistoryDetailedEntity> result = new ArrayList<>();
         SQLiteDatabase db = this.getReadableDatabase();

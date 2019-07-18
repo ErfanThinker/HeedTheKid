@@ -29,17 +29,17 @@
 
     </group>
 
-    <item android:title="Actions">
-        <menu>
-            <item
-                android:id="@+id/nav_sync"
-                android:icon="@drawable/ic_file_cloud_upload"
-                android:title="Sync data" />
-            <item
-                android:id="@+id/nav_export"
-                android:icon="@drawable/ic_file_upload"
-                android:title="Export as csv" />
-        </menu>
-    </item>
+    <!--<item android:title="Actions">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_sync"-->
+                <!--android:icon="@drawable/ic_file_cloud_upload"-->
+                <!--android:title="Sync data" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_export"-->
+                <!--android:icon="@drawable/ic_file_upload"-->
+                <!--android:title="Export as csv" />-->
+        <!--</menu>-->
+    <!--</item>-->
 
 </menu>

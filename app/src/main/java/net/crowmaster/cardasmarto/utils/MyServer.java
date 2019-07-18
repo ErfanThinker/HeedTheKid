@@ -43,6 +43,11 @@ public class MyServer extends NanoHTTPD {
 //        }
 //    };
 
+
+    /**
+     * used for testing without the actual car
+     * @throws JSONException
+     */
     private void receiveTestData() throws JSONException {
         Random rand = new Random(time);
         JSONObject mJson = new JSONObject();
@@ -69,6 +74,15 @@ public class MyServer extends NanoHTTPD {
 //        mRunnable.run();
     }
 
+    /**
+     *
+     * @param session
+     *            The HTTP session
+     * creates a json object out of received data and passes it to
+     * {@link #responseInterface ResponseInterface} so that
+     * any class that has implemented that interface can parse the data
+     * @throws JSONException
+     */
     @Override
     public Response serve(IHTTPSession session) throws JSONException {
         //Log.e("Tag", "request received!");
@@ -101,7 +115,7 @@ public class MyServer extends NanoHTTPD {
         //String postParameter = session.getParms().get("key_0");
 
         final JSONObject json = new JSONObject(files.get("postData"));
-        Log.e("MyData", json.toString());
+//        Log.e("MyData", json.toString());
         responseInterface.OnResponse(json);
         return newFixedLengthResponse("Good job Rozhina");
     }

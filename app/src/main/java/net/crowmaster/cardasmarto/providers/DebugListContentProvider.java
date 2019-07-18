@@ -15,6 +15,9 @@ import androidx.annotation.Nullable;
 import net.crowmaster.cardasmarto.contracts.DBContract;
 import net.crowmaster.cardasmarto.utils.DBHelper;
 
+/**
+ * This class is not used at the moment. Might as well be removed (remember to remove it from the manifest as well
+ */
 public class DebugListContentProvider extends ContentProvider {
 
     private DBHelper db;

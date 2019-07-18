@@ -2,6 +2,7 @@ package net.crowmaster.cardasmarto.utils;
 
 /**
  * Created by root on 6/7/16.
+ * Can be used to manage hotspot on android versions prior to 6
  */
 
 import android.content.Context;
@@ -14,6 +15,7 @@ import android.util.Log;
 import java.lang.reflect.Method;
 
 import static net.crowmaster.cardasmarto.services.DataCollectorService.TAG;
+
 
 public class HsManager {
 

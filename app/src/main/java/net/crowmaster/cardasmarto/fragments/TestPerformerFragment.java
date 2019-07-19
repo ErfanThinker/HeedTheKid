@@ -88,11 +88,10 @@ import java.util.concurrent.TimeUnit;
 public class TestPerformerFragment extends Fragment {
     private boolean isSvcRunning = false;
     private static final int MY_PERMISSIONS_REQUEST_STORAGE = 2937;
-    private static final int MY_PERMISSIONS_REQUEST_LOCATION = 2938;
     private static final int RECORDING_ID = 8364;
     private SharedPreferences sp;
 //    public static PlayPauseDrawable mPlayPauseDrawable;
-    private static WifiManager.LocalOnlyHotspotReservation mReservation;
+//    private static WifiManager.LocalOnlyHotspotReservation mReservation;
     public static Boolean isRecording;
     private  String Tag = "TestPerformerFragment";
     //private TextView helloTV;
@@ -330,7 +329,7 @@ public class TestPerformerFragment extends Fragment {
                 Log.e("TAG", "I don't have permission");
                 ActivityCompat.requestPermissions(getActivity(),
                         new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
-                        MY_PERMISSIONS_REQUEST_LOCATION);
+                        MY_PERMISSIONS_REQUEST_STORAGE);
                 return 0;
 
             }
@@ -507,10 +506,6 @@ public class TestPerformerFragment extends Fragment {
                 .registerContentObserver(SensorDataProvider.Constants.SensorURL, true,
                         myObserver);
 
-        /*if(helloTV != null) {
-            helloTV.setText("Data collection started on:\n" +
-                    Calendar.getInstance().getTime().toString());
-        }*/
         buildNotification();
         mChronometer.setVisibility(View.VISIBLE);
         mChronometer.setBase(SystemClock.elapsedRealtime());

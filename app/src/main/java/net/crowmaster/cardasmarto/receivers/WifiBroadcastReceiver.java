@@ -13,7 +13,7 @@ import net.crowmaster.cardasmarto.services.DataCollectorService;
 
 /**
  * This receiver checks the name of newly connected wifi and if it equals to
- * {@link #desiredSSID predefined SSID}.
+ * {@link #desiredSSID predefined SSID} then starts {@link net.crowmaster.cardasmarto.services.DataCollectorService}.
  */
 public class WifiBroadcastReceiver extends BroadcastReceiver {
 

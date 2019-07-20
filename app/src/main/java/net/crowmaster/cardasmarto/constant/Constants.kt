@@ -1,11 +1,10 @@
 package net.crowmaster.cardasmarto.constant
 
 /**
- * Constants used as keys for reading data from the incoming packets from the car and saving the states of the app in SharedPreferences
+ * Constants used as keys for reading data to/from the SharedPreferences regarding saved user data
  */
 class Constants {
     companion object {
-        const val KEY_FB_TOKEN = "firebase_token"
         const val SP_CHILD_NAME = "childName"
         const val SP_CHILD_AGE = "childAge"
         const val SP_PHONE = "phone"

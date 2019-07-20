@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>لیست تصاویر و فیلمها</title>
+<style type="text/css">
+h1 {color: #228b22; padding-right: 10px; direction: rtl;}
+h2 {color: #228888; padding-right: 20px; direction: rtl;}
+h3 {color: #fed12d; padding-right: 30px; direction: rtl;}
+h4 {color: #e49b2f; padding-right: 35px; direction: rtl;}
+p {padding-right: 35px; text-indent: 15px; direction: rtl; line-height: 170%}
+.style1 {
+	direction: rtl;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<p class="style1"><span lang="fa">برنامه</span></p>
+<p class="style1"><span lang="fa">در این صفحه لیست تمامی کدها، نحوه استفاده و 
+کامپایل کردن و ... آمده است. لینک به تمامی کدها باید موجود باشد.</span></p>
+
+<h1 class="style1"><span lang="fa"><b>کلاینت اندروید پروژه‌ی ماشین</b></span></h1>
+<p class="style1"><span lang="fa">کدهای مربوط به اپلیکیشن در github بارگذاری شده و از <a href="https://github.com/ErfanThinker/HeedTheKid">اینجا</a> قابل دسترسی می‌باشد. کلاینت اندروید در محیط اندروید استودیو 3.4 نوشته شده و از گریدل 3.4.0-alpha05 و کاتلین 1.3.21 برای کامپایل آن استفاده شده است. شایان ذکر است که دیتابیس مورد استفاده‌ی برنامه SQLite ساده با رابط SQLiteOpenHelper می‌باشد. لازم به ذکر است که این اپلیکیشن از سرویس Firebase Messaging گوگل به منظور دریافت اعلانات از سرور استفاده می‌کند.</span></p>
+<p class="style1"><span lang="fa">در ادامه کلاس‌‌های مهم برنامه و قراردادها توصیف شده اند.</span></p>
+
+<!-- Activities -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/activities">activities</a></span></h2>
+<h3 class="style1" id="MainActivity"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/activities/MainActivity.java">MainActivity</a></span></h3>
+<p class="style1"><span lang="fa">به استثنای قسمت کوچکی از برنامه، تمام فرگمنت‌ها در این اکتیویتی میزبانی می‌شوند و نقطه‌ی شروع برنامه می‌باشد.</span></p>
+<p class="style1"><span lang="fa">فرگمنت‌هایی که در این اکتیویتی میزبانی می‌شوند به قرار زیر می‌باشند:</span></p>
+
+<h4 class="style1" id="TestPerformerFragment"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/fragments/TestPerformerFragment.java">TestPerformerFragment</a></span></h4>
+<p class="style1"><span lang="fa">وظیفه‌ی اصلی این فرگمنت اجرای سرور داخلی برای گرفتن اطلاعات از ماشین و نمایش قسمتی از اطلاعات در همین فرگمنت است. در این فرگمنت پس از فشرده شدن دکمه‌ی شروع عملیات، وای فای فعال شده و کلاینت به شبکه‌ی از پیش تعیین شده متصل می‌شود و سرویس DataCollectorService که وظیفه‌ی اجرای سرور داخلی برای ارتباط با ماشین را دارد اجرا می‌شود(متد enableWirelessAndRunServer). لازم به ذکر است که ناظر myObserver نیز شروع به بروز رسانی رابط کاربری با توجه به تغییرات در دیتابیس برنامه می‌کند.</span></p>
+
+<h4 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/fragments/PreferencesFragment.java">PreferencesFragment</a></span></h4>
+<p class="style1">این فرگمنت به منظور دریافت و ذخیره‌ی اطلاعات کاربر طراحی شده است و اطلاعات دریافتی توسط SharedPreferences در فایل "preferences.xml" ذخیره می‌شوند.</p>
+
+<h4 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/fragments/HistoryFragment.java">HistoryFragment</a></span></h4>
+<p class="style1">در این فرگمنت لیست اطلاعات تعامل با ماشین به همراه اطلاعات کلی آن‌ها به تفکیک جلسه (session) قابل مشاهده می‌باشد.</p>
+
+<h4 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/fragments/DebugFragment.java">DebugFragment</a></span></h4>
+<p class="style1">این فرگمنت لیستی از ۱۰۰ رکورد آخر ثبت شده در دیتابیس را به کاربر ارائه می‌دهد و برای فاز آزمایش و توسعه طراحی شده است.</p>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/activities/GuideActivity.java">GuideActivity</a></span></h3>
+<p class="style1"><span lang="fa">اکتیویتی مذکور به منظور نمایش اطلاعات و راهنمایی در مورد نحوه‌ی کار برنامه و سیستم استفاده می‌‌شود. این اکتیویتی از طریق گزینه‌ی "How it works" در Navigation Menu موجود در <a style="color: inherit; " href="#MainActivity">MainActivity</a> به اجرا در می‌آید. فرگمنت‌های مورد استفاده در این اکتیویتی با استفاده از کتابخانه AppIntro در درون خود این اکتیویتی ساخته می‌شوند.</span></p>
+
+<!-- Services -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/services">services</a></span></h2>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/services/DataCollectorService.java">DataCollectorService</a></span></h3>
+<p class="style1">این سرویس به منظور جمع‌آوری اطلاعات از ماشین ساخته شده و تنها با فشرده شدن دکمه‌ی شروع عملیات در <a style="color: inherit; " href="#TestPerformerFragment">TestPerformerFragment</a> راه اندازی می‌شود و کاربر تنها با فشردن دوباره‌ی همان دکمه می‌تواند به این سرویس پایان دهد. سرویس مذکور در هنگام شروع اقدام به راه‌اندازی سرور NanoHttpd می‌کند که هدف آن دریافت بسته‌های اطلاعاتیست که توسط متد POST و به صورت Json از ماشین ارسال می‌شوند. قرارداد کلید‌های اطلاعات گنجانده شده در بسته‌های دریافتی از سوی ماشین در فایل <a style="color: inherit;" href="#CarContracts">CarContracts</a> قرار دارد. اطلاعات دریافتی توسط کلاس <a style="color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/providers/SensorDataProvider.java">SensorDataProvider</a> در دیتابیس برنامه ثبت می‌شوند.</p>
+
+<!-- Constant -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/constant">constant</a></span></h2>
+<h3 class="style1" id="Constants"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/constant/Constants.kt">Constants</a></span></h3>
+<p class="style1">این فایل محتوی ثابت‌‌هایی است که برای ثبت یا استخراج مقادیر کاربر کنونی برنامه در SharedPreferences استفاده می‌شوند.</p>
+
+
+<!-- Contracts -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/contracts">contracts</a></span></h2>
+
+<h3 class="style1" id="CarContracts"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/contracts/CarContracts.java">CarContracts</a></span></h3>
+<p class="style1">این فایل حاوی کلید‌های مورد استفاده برای استخراج اطلاعات از اطلاعات ارسالی در قالب Json توسط ماشین است.</p>
+
+<h3 class="style1" id="DBContract"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/contracts/DBContract.java">DBContract</a></span></h3>
+<p class="style1">این کلاس شامل تنظیمات دیتابیس و نام ستون‌های آن می‌باشد.</p>
+
+
+<!-- Network -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/network">network</a></span></h2>
+<p class="style1">این دایرکتوری حاوی کلاس‌های لازم برای ارتباط کلاینت اندروید با سرور به منظور ارسال اطلاعات ذخیره شده‌ی قبلی می‌باشد. ارتباط از طریق Retrofit2 و Okhttp3 صورت می‌گیرد.</p>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/network/entities">entities</a></span></h3>
+<p class="style1">این دایرکتوری حاوی کلاس‌های داده به منظور تبدیل اطلاعات ذخیره شده در دیتابیس به فرمت Json به منظور ارسال به سرور می‌باشد. چنانچه نیاز است نام فیلد‌ها یا ساختار فایل Json ارسالی تغییر کند، کلاس‌های موجود در این دایرکتوری را تغییر دهید.</p>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/network/ServerApi.kt">ServerApi</a></span></h3>
+<p class="style1">کلاس اصلی که با پیاده سازی رابط <a style="color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/network/ServerService.kt">ServerService</a> وظیفه‌ی ارتباط با سرور را دارد.</p>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/network/ServerService.kt">ServerService</a></span></h3>
+<p class="style1">این رابط ساختار ریشه‌ی اطلاعات ارسالی را مشخص می‌کند و همچنین آدرس پایه‌ی سرور در این اینترفیس تعریف شده است. چنانچه نیاز به تغییر آدرس سرور باشد، تنها کافیست متغیر "ENDPOINT" موجود در این فایل عوض شود.</p>
+
+
+<!-- Utils -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/utils">utils</a></span></h2>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/utils/DBHelper.java">DBHelper</a></span></h3>
+<p class="style1">این کلاس رابط اصلی ارتباط با دیتابیس داخل برنامه می‌باشد. تقریبا تمام متد‌های استخراج اطلاعات از دیتابیس که در برنامه مورد استفاده قرار گرفته‌اند در این کلاس می‌باشند و کد مربوط به راه اندازی و بروز رسانی دیتابیس نیز در این کلاس پیاده سازی شده است.</p>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/utils/Installation.java">Installation</a></span></h3>
+<p class="style1">این کلاس به منظور تولید یک کد اختصاصی و منحربفرد برای هر نصب برنامه و استخراج آن در آینده به منظور فرستادن این کد به همراه اطلاعات ارسالی به سرور مورد استفاده قرار می‌گیرد. این کلاس به صورت مستقیم تنها در <a style="color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/config/AppConfig.java">AppConfig</a> صدا زده می‌شود و بقیه‌ی قسمت‌های برنامه اگر نیاز به کد نصب داشته باشند، اطلاعات را از کلاس <a style="color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/config/AppConfig.java">AppConfig</a> دریافت می‌کنند.</p>
+
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/utils/MyServer.java">MyServer</a></span></h3>
+<p class="style1">این کلاس یک بسط از سرور NanoHttpd است که وظیفه‌ی ایجاد سرور HTTP برای دریافت اطلاعات از ماشین را دارد. چنانچه نیاز به شبیه سازی دریافت اطلاعات از ماشین بدون وجود ماشین باشد، توابعی بصورت غیر فعال در این کلاس وجود دارند که با جایگزین کردن آنها می‌توان شبیه سازی را انجام داد.</p>
+
+
+<!-- Workers -->
+<h2 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/tree/master/app/src/main/java/net/crowmaster/cardasmarto/workers">workers</a></span></h2>
+<h3 class="style1"><span lang="fa"><a style="text-decoration:none; color: inherit;" href="https://github.com/ErfanThinker/HeedTheKid/blob/master/app/src/main/java/net/crowmaster/cardasmarto/workers/DataSyncWorker.kt">DataSyncWorker</a></span></h3>
+<p class="style1">این کلاس به منظور ارسال اطلاعات ذخیره شده در دیتابیس به سرور به صورت خودکار است به توسط WorkManager فراخوانی می‌شود. پس از ارسال موفقیت آمیز اطلاعات به سرور نیز در درون همین کلاس، وضعیت رکورد‌های ارسالی در دیتابیس به همگام سازی شده (تغییر مقادیر ستون "synced" در دیتابیس) به‌روزرسانی می‌شود.</p>
+
+
+<p class="style1">&nbsp;</p>
+
+</body>
+
+</html>

@@ -119,7 +119,7 @@ public class DataCollectorService extends Service implements MyServer.ResponseIn
     @Override
     public void onDestroy() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mReceiver);
-        Log.e("Data Collector Service", "OnDestroy");
+//        Log.e("Data Collector Service", "OnDestroy");
         if(myServer != null) {
             myServer.stop();
         }

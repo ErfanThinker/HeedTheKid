@@ -1,5 +1,8 @@
 package net.crowmaster.cardasmarto.contracts;
 
+/**
+ * Contracts used for fetching the values from json data in incoming posts from the car
+ */
 public class CarContracts {
 
     public class KeyTable {

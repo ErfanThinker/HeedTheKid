@@ -30,6 +30,14 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.Calendar;
 
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.AC_X;
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.AC_Y;
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.AC_Z;
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.BATTERY;
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.CAR_TIME;
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.ENCODER_1;
+import static net.crowmaster.cardasmarto.contracts.CarContracts.KeyTable.ENCODER_2;
+
 /**
  * Created by root on 6/16/16.
  * This service is responsible for collecting the data from the car
@@ -123,14 +131,14 @@ public class DataCollectorService extends Service implements MyServer.ResponseIn
     public void OnResponse(JSONObject response) {
         try {
             ContentValues cv = new ContentValues();
-            cv.put(DBContract.DataTable.COLUMN_AC_X, response.getLong("AcX"));
-            cv.put(DBContract.DataTable.COLUMN_AC_Y, response.getLong("AcY"));
-            cv.put(DBContract.DataTable.COLUMN_AC_Z, response.getLong("AcZ"));
-            cv.put(DBContract.DataTable.COLUMN_ENCODER_1, response.getLong("Encode1"));
-            cv.put(DBContract.DataTable.COLUMN_ENCODER_2, response.getLong("Encode2"));
-            cv.put(DBContract.DataTable.COLUMN_CLIENT_TIME, response.getLong("time"));
-            if (response.has("battery")) {
-                cv.put(DBContract.DataTable.BATTERY_LVL, response.getLong("battery"));
+            cv.put(DBContract.DataTable.COLUMN_AC_X, response.getLong(AC_X));
+            cv.put(DBContract.DataTable.COLUMN_AC_Y, response.getLong(AC_Y));
+            cv.put(DBContract.DataTable.COLUMN_AC_Z, response.getLong(AC_Z));
+            cv.put(DBContract.DataTable.COLUMN_ENCODER_1, response.getLong(ENCODER_1));
+            cv.put(DBContract.DataTable.COLUMN_ENCODER_2, response.getLong(ENCODER_2));
+            cv.put(DBContract.DataTable.COLUMN_CLIENT_TIME, response.getLong(CAR_TIME));
+            if (response.has(BATTERY)) {
+                cv.put(DBContract.DataTable.BATTERY_LVL, response.getLong(BATTERY));
             } else {
                 cv.put(DBContract.DataTable.BATTERY_LVL, 0l);
             }
